@@ -1,0 +1,25 @@
+<p>navbar works!</p>
+<nav>
+  <a routerLink="/"
+     routerLinkActive="active"
+[routerLinkActiveOptions]=" { exact: true } ">Counter</a>
+    <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero</a>
+    <a [routerLink]="['/Vista']" [routerLinkActive]="'active'">Vista</a>
+    <a [routerLink]="['/Pokemon']" [routerLinkActive]="'active'">Pokemon</a>
+</nav>
+<style>
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #121213;
+        color: rgb(245, 236, 236);
+        padding: 12px 16px;
+    }
+    nav a {
+        text-decoration: none;
+        color: white;
+    }
+    nav a.active {
+        color: rgb(255, 102, 0);
+    }
+</style>

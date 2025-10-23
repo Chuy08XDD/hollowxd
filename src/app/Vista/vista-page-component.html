@@ -1,0 +1,88 @@
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="hollow-knight-voidheart.mp4" type="video/mp4">
+    </video>
+<section id="content" class="w-screen bg-black text-white py-1">
+<div class="w-full flex justify-center mt-4">
+<!--<div class="flex item-center space-x-2">-->
+<img src="titulos/Titulo.png" width="800px" />
+</div>
+<!--</div>-->
+</section><br>
+<p> Hollow Knight es un videojuego de acción y aventura desarrollado por Team Cherry. Fue lanzado en 2017 y ha ganado una gran popularidad por su estilo artístico, jugabilidad desafiante y mundo expansivo. 
+    <br>Hollow Knight es un videojuego perteneciente al género metroidvania. El videojuego fue inicialmente lanzado para Microsoft Windows en febrero de 2017, y más tarde para macOS y Linux en abril de 2017.
+    <br>La adaptación para Nintendo Switch fue lanzada el 12 de junio de 2018. El desarrollo fue parcialmente financiado como un proyecto Kickstarter que obtuvo 57 000 dólares hasta finales de 2014.
+    <br>El juego fue lanzado en las consolas PlayStation 4 y Xbox One el 25 de septiembre de 2018.
+    <br>
+    <br>El videojuego cuenta la historia del Caballero, en su búsqueda para descubrir los secretos del largamente abandonado reino de Hallownest, cuyas profundidades atraen a los aventureros
+    <br> y valientes con la promesa de tesoros o la respuesta a misterios antiguos.
+    <br>
+    <br>A continuación, te proporciono una guía básica para comenzar en el gran mundo de Hollow Knight:</p>
+    <br>
+<p class="text-2xl"> En que plataforma juegas? </p>
+<h5 class="font-medium"> {{plataforma()}} </h5>
+<br>
+<div class="text-center">
+<button id="tilin"(click)="cambio()"> Nintendo Switch {{cambio()}} </button> 
+<button id="tilin2"(click)="cambio2()"> PlayStation 4 {{cambio()}} </button>
+<button id="tilin3"(click)="cambio3()"> Xbox One {{cambio()}} </button>
+<button id="tilin4"(click)="cambio4()"> PC {{cambio()}} </button>
+</div>
+<br><br>
+<div class="text-2xl font-bold mt-5">
+<p>En esta guia te mostraremos cosas como los enemigos, jefes, zonas de mapa, amuletos, etc</p>
+</div>
+<br><br>
+<div class="text-center">
+<a href="http://localhost:4200/enemigos">
+    <img src="enemigos.jpg" width="185px" alt="">
+    Enemigos
+</a>
+<a href="http://localhost:4200/jefes">
+    <img src="RadianceSupreme.jpg" width="123px" alt="">
+    Jefes
+</a>
+<a href="http://localhost:4200/mapa">
+    <img src="hallownest.jpg" width="300px" alt="">
+    Mapa
+</a>
+<br>
+<a href="http://localhost:4200/amuletos">
+    <img src="Bendi.jpg" width="137px" alt="">
+    Amuletos
+</a>
+<a href="http://localhost:4200/habilidades">
+    <img src="Desolador.jpg" width="137px" alt="">
+    Habilidades
+</a>
+<a href="http://localhost:4200/personajes">
+    <img src="esebaboso.jpg" width="117px" alt="">
+    Personajes
+</a>
+</div>
+<br><br>
+<div class="text-center ">
+<a href="https://store.steampowered.com/app/367520/Hollow_Knight/" > Comprar Hollow Knight en Steam </a>
+<a href="https://www.youtube.com/watch?v=UAO2urG23S4" > Ver Trailer de Hollow Knight </a>
+</div>
+<br><br>
+<section class="w-screen bg-black text-white py-1">
+    <div class="text-center">
+    <div class="text-xl font-bold mt-5">
+    <p> Te gustaria descubrir más juegos interesantes y entretenidos?</p>
+    <p> Descubre más de ellos a continuación! </p>
+</div>
+<br>
+    <h2 class="text-x1 font-bold mb-4">JUEGOS RECOMENDADOS EN <br> PC/XBOX/PS/SWITCH</h2>
+    <h5 class="text-x1 font-bold mb-4">¡PATROCINADO POR R A W G!</h5>
+    <p class="text-x1 font-bold mb-4">NO TODOS LOS JUEGOS ESTAN DISPONIBLES EN TODAS LAS PLATAFORMAS</p>
+    <h5 class="text-x1 font-bold mb-4">Abajo podrás ir al sitio ofical de Steam y al sitio ofical de R A W G</h5>
+    <a id="tilin-infinity"href="https://store.steampowered.com/" > Steam </a>
+    <a id="tilin-finale"href="https://rawg.io/" > Sitio Oficial de R A W G </a>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div *ngFor="let g of games()" class="items-center game-card bg-black/40 rounded-lg p-2 text-center text-white hover:bg-white/10 transition w-full">
+            <img class="rounded-lg object-cover" *ngIf="g.background_image" [src]="g.background_image" alt="{{g.name}}" class="w-full h-full object-cover rounded-md mb-2"/>
+            <div class="text-xl font-medium truncate">{{g.name}}</div>
+            </div>
+    </div>
+    </div>
+</section>
