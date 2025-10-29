@@ -92,19 +92,6 @@ import { CommonModule } from "@angular/common";
             border: black 5px solid;
             cursor: pointer;
         }
-        #tilin-infinity {
-             display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            padding: 10px 10px;
-            width: 250px;
-            background-color: black;
-            color: white;
-            border-radius: 10px;
-            border: white 5px solid;
-            cursor: pointer;
-        }
         #tilin-finale { display: inline-block;
             font-size: 20px;
             margin-top: 20px;

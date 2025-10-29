@@ -14,7 +14,7 @@ import { PersonajesPageComponent } from './Vista/personajes/personajes-page-comp
 
 export const routes: Routes = [
   { 
-    path: '', // or specify a valid path string
+    path: 'Counter', // or specify a valid path string
     component: CounterPageComponent,
   }, 
   {

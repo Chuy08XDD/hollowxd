@@ -7,7 +7,6 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 .background-video {
     position: fixed; /* Mantiene el video fijo en la pantalla */
     top: 0;
