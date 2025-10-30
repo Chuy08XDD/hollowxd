@@ -6,118 +6,24 @@ import { CommonModule } from "@angular/common";
 @Component({
     imports: [CommonModule],
     templateUrl: './vista-page-component.html',
-    styles: [`
-        h1 {
-            font-size: 50px;
-            position: relative;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 5px white;         
-            }
-        a {
-            display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            margin-right: 20px;
-            padding: 10px 10px;
-            width: 250px;
-            background-color: black;
-            color: white;
-            border-radius: 10px;
-            border: white 5px solid;
-            cursor: pointer;
-        }
-        h5, p {
-            text-align: center;
-            margin: 0 30px 0 30px;
-            color: white;
-            
-        }
-        button {
-            padding: 10px 10px;
-            margin-right: 10px;
-            width: 100px;
-            margin-left: 35px;
-        }
-        #tilin {
-            display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            padding: 10px 10px;
-            width: 250px;
-            background-color: red;
-            color: white;
-            border-radius: 10px;
-            border: black 5px solid;
-            cursor: pointer;
-        }
-        #tilin2 {
-            display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            padding: 10px 10px;
-            width: 250px;
-            background-color: blue;
-            color: white;
-            border-radius: 10px;
-            border: black 5px solid;
-            cursor: pointer;
-        }
-        #tilin3 {
-            display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            padding: 10px 10px;
-            width: 250px;
-            background-color: green;
-            color: white;
-            border-radius: 10px;
-            border: black 5px solid;
-            cursor: pointer;
-        }
-        #tilin4 {
-            display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            padding: 10px 10px;
-            width: 250px;
-            background-color: gray;
-            color: white;
-            border-radius: 10px;
-            border: black 5px solid;
-            cursor: pointer;
-        }
-        #tilin-finale { display: inline-block;
-            font-size: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            padding: 10px 10px;
-            width: 250px;
-            background-color: black;
-            color: white;
-            border-radius: 10px;
-            border: white 5px solid;
-            cursor: pointer;}
-`],
+    styleUrl: './vista-page-component.css'
 })
 export class VistaPageComponent {
-    Signal = ('');
-    plataforma() {return`${this.Signal}`;}
-    cambio(values?: string) {this.Signal = 'Nintendo Switch';}
-    cambio2(values?: string) {this.Signal = 'Play Station 4';}
-    cambio3(values?: string) {this.Signal = 'Xbox One';}
-    cambio4(values?: string) {this.Signal = 'PC';}
+    signal = signal<string>('');
+    plataforma() {return this.signal();}
+    cambio(values?: string) {this.signal.set('Nintendo Switch');}
+    cambio2(values?: string) {this.signal.set('Play Station 4');}
+    cambio3(values?: string) {this.signal.set('Xbox One');}
+    cambio4(values?: string) {this.signal.set('PC');}
     games = signal<GameResults[]>([]);
     loading = signal(false);
     private http = inject(gameservice);
 
     constructor(){
-        this.TopGames();
+        // Delay API call to improve initial page load
+        setTimeout(() => {
+            this.TopGames();
+        }, 100);
     }
 
     TopGames(pageSize = 24){
@@ -125,5 +31,9 @@ export class VistaPageComponent {
         this.http.getGames(pageSize).subscribe({
             next: (res) => { this.games.set(res.results || []); this.loading.set(false); },
         });
+    }
+
+    trackByGame(index: number, game: GameResults): number {
+        return game.id;
     }
 }
