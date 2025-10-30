@@ -7,9 +7,12 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
     templateUrl: './canales.html',
     styles: [`
-        #hola {
-            border-radius: 50%;
-            border: white 4px solid;
+        #canalesomg {
+        border: black 4px solid;
+        background-color: rgba(0, 203, 210, 0.25);
+        }
+        #pepe {
+        background-color:  rgba(255, 255, 255, 0.25);
         }
         `]
 })

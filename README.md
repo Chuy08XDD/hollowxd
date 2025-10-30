@@ -1,7 +1,8 @@
 (de repositorio)
 # hollowxd
 si me demandan soy gay
-=======
+
+PROYECTO PERSONAL QUE INICIO COMO UNA PRACTICA SENCILLA DE CSS PERO QUE ME TERMINE TOMANDO EN SERIO Y AHORA SERA UN PROYECTO MAS GRANDE, EN GENERAL EL SITIO SIGUE EN UNA ETAPA MEDIA TEMPRANA A MI PARECER PERO A VER QUE TAL ME QUEDA LUEGO XDXDXD
 # Practica2
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.

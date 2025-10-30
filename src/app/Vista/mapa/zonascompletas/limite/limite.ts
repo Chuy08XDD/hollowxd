@@ -7,9 +7,12 @@ import { CommonModule } from '@angular/common';
     imports: [CommonModule],
     templateUrl: './limite.html',
     styles: [`
-        #hola {
-            border-radius: 50%;
-            border: white 4px solid;
+        #limiteomg {
+        border: black 4px solid;
+        background-color: rgba(227, 225, 222, 0.25);
+        }
+        #pepe {
+        background-color:  rgba(255, 255, 255, 0.25);
         }
         `]
 })
