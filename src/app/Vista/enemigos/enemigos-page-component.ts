@@ -15,10 +15,11 @@ import { Colmena } from "./colmena/colmena";
 import { Nido } from "./nidoprofundo/nido";
 import { Cuenca } from "./cuenca/cuenca";
 import { Indice } from "./indice/indice";
+import { RouterLink } from "@angular/router";
 @Component({
     standalone: true,
     templateUrl: './enemigos-page-component.html',
-    imports: [Cruces, Inicio, Sendero, Cumbres, Acantilados, Ciudad, Cañon, Paramos, Reposo, Jardines, Canales, Limite, Colmena, Nido, Cuenca, Indice],
+    imports: [Cruces, Inicio, Sendero, Cumbres, Acantilados, Ciudad, Cañon, Paramos, Reposo, Jardines, Canales, Limite, Colmena, Nido, Cuenca, Indice, RouterLink],
     styles: [`
         #papu {
             font-size: 50px;

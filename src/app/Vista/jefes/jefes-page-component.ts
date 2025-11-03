@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Jefecitos } from "./jefecitos/jefecitos";
+import { RouterLink } from "@angular/router";
 @Component({
     standalone: true,
-    imports: [Jefecitos],
+    imports: [Jefecitos, RouterLink],
     templateUrl: './jefes-page-component.html',
     styles: [`
         #hola {

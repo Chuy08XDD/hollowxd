@@ -2,9 +2,10 @@ import { Component, signal, inject } from "@angular/core";
 import { GameResults } from "../page/interface/interfacev2";
 import { gameservice } from "../page/service/service";
 import { CommonModule } from "@angular/common";
+import { RouterLink } from "@angular/router";
 
 @Component({
-    imports: [CommonModule],
+    imports: [CommonModule, RouterLink],
     templateUrl: './vista-page-component.html',
     styleUrl: './vista-page-component.css'
 })
