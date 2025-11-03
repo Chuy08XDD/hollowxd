@@ -6,6 +6,7 @@
 <div class="w-full flex justify-center mt-4">
 <!--<div class="flex item-center space-x-2">-->
 <img src="titulos/Titulo.png" width="800px" alt="titulo pagina principal" />
+<img src="titulos/Titulo.png" width="800" height="auto" loading="eager" alt="Hollow Knight Guía" />
 </div>
 <!--</div>-->
 </section><br>
@@ -38,6 +39,21 @@
     <!--PC-->
 <button id="PC" aria-label="pc" (click)="cambio4()" class="w-20 h-23 gap-3 px-5 py-3 bg-black/50 rounded-xl relative overflow-hidden hover:scale-105 transition-transform duration-300"> 
 <img src="https://images-na.ssl-images-amazon.com/images/G/01/digital-videogames/vghp/NEW/PC750.png" class="absolute inset-0 w-full h-full object-cover" alt="logo pc">  
+    <!--Nintendo Switch-->
+<button id="tilin" aria-label="Nintendo Switch" (click)="cambio()" class="w-20 h-23 gap-3 px-5 py-3 bg-black/50 rounded-xl relative overflow-hidden hover:scale-105 transition-transform duration-300"> 
+<img src="https://static.vecteezy.com/system/resources/previews/020/118/334/non_2x/nintendo-switch-logo-free-download-free-vector.jpg" loading="lazy" alt="Nintendo Switch logo" class="absolute inset-0 w-full h-full object-cover">  
+<span class="relative font-bold text-lg">{{cambio()}} </span></button>
+    <!--PS4-->
+<button id="tilin2" aria-label="PlayStation 4" (click)="cambio2()" class="w-20 h-23 gap-3 px-5 py-3 bg-black/50 rounded-xl relative overflow-hidden hover:scale-105 transition-transform duration-300"> 
+<img src="https://static.vecteezy.com/system/resources/previews/020/336/136/non_2x/playstation-ps5-ps4-logo-free-free-vector.jpg" loading="lazy" alt="PlayStation logo" class="absolute inset-0 w-full h-full object-cover">  
+<span class="relative font-bold text-lg">{{cambio()}} </span></button>
+    <!--Xbox-->
+<button id="tilin3" aria-label="Xbox One" (click)="cambio3()" class="w-20 h-23 gap-3 px-5 py-3 bg-black/50 rounded-xl relative overflow-hidden hover:scale-105 transition-transform duration-300"> 
+<img src="https://tse2.mm.bing.net/th/id/OIP.cSGDJh8WVTy25QYmglRg-wHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="Xbox logo" class="absolute inset-0 w-full h-full object-cover">  
+<span class="relative font-bold text-lg">{{cambio()}} </span></button>
+    <!--PC-->
+<button id="tilin4" aria-label="PC" (click)="cambio4()" class="w-20 h-23 gap-3 px-5 py-3 bg-black/50 rounded-xl relative overflow-hidden hover:scale-105 transition-transform duration-300"> 
+<img src="https://images-na.ssl-images-amazon.com/images/G/01/digital-videogames/vghp/NEW/PC750.png" loading="lazy" alt="PC logo" class="absolute inset-0 w-full h-full object-cover">  
 <span class="relative font-bold text-lg">{{cambio()}} </span></button>
 </div>
 <br><br>
@@ -69,6 +85,28 @@
     <!--Personajes-->
 <a class="relative w-49 h-49 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" [routerLink]="['/personajes']">
     <img src="https://tse3.mm.bing.net/th/id/OIP.wwHM2sQiSLki5lZNWzG0WQHaEX?rs=1&pid=ImgDetMain&o=7&rm=3" class="absolute inset-0 w-full h-full object-cover" alt="personajes-fondo"/>
+<a class="relative w-49 h-49 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" href="http://localhost:4200/enemigos">
+    <img src="https://i.pinimg.com/736x/a0/06/2f/a0062f039f4780329262056c0e5b61aa.jpg" loading="lazy" alt="Enemigos" class="absolute inset-0 w-full h-full object-cover"/>
+    <span class="absolute inset-0 flex items-center justify-center bg-black/20 text-white font-bold">Enemigos</span></a>
+    <!--Jefes-->
+<a class="relative w-49 h-49 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" href="http://localhost:4200/jefes">
+    <img src="https://i.ytimg.com/vi/RblFDn5zBTs/maxresdefault.jpg" loading="lazy" alt="Jefes" class="absolute inset-0 w-full h-full object-cover"/>
+    <span class="absolute inset-0 flex items-center justify-center bg-black/20 text-white font-bold">Jefes</span></a>
+    <!--Mapa-->
+<a class="relative w-49 h-49 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" href="http://localhost:4200/mapa">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.LCI5-SgROe_R-dVrxGsgzAHaFO?rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="Mapa" class="absolute inset-0 w-full h-full object-cover"/>
+    <span class="absolute inset-0 flex items-center justify-center bg-black/20 text-white font-bold">Mapa</span></a><br>
+    <!--Amuletos-->
+<a class="relative w-49 h-49 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" href="http://localhost:4200/amuletos">
+    <img src="https://static0.hardcoregamerimages.com/wordpress/wp-content/uploads/2024/05/untitled-design-87.jpg" loading="lazy" alt="Amuletos" class="absolute inset-0 w-full h-full object-cover"/>
+    <span class="absolute inset-0 flex items-center justify-center bg-black/20 text-white font-bold">Amuletos</span></a>
+    <!--Habilidades-->
+<a class="relative w-49 h-49 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" href="http://localhost:4200/habilidades">
+    <img src="https://pm1.narvii.com/7600/cf0b391c7cb5b81da630fb37c3fcc661c113b8d8r1-1024-576v2_hq.jpg" loading="lazy" alt="Habilidades" class="absolute inset-0 w-full h-full object-cover"/>
+    <span class="absolute inset-0 flex items-center justify-center bg-black/20 text-white font-bold">Habilidades</span></a>
+    <!--Personajes-->
+<a class="relative w-49 h-49 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" href="http://localhost:4200/personajes">
+    <img src="https://tse3.mm.bing.net/th/id/OIP.wwHM2sQiSLki5lZNWzG0WQHaEX?rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="Personajes" class="absolute inset-0 w-full h-full object-cover"/>
     <span class="absolute inset-0 flex items-center justify-center bg-black/20 text-white font-bold">Personajes</span></a>
 </div>
 <br><br>
@@ -98,8 +136,17 @@
 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
         <div *ngFor="let g of games()" class="items-center game-card bg-black/40 rounded-lg p-2 text-center text-white hover:bg-white/10 transition w-full">
             <img class="rounded-lg object-cover" *ngIf="g.background_image" [src]="g.background_image" alt="{{g.name}}" class="w-full h-full object-cover rounded-md mb-2"/>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.ti_w9fIYP4mz6GGThbZVMQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" loading="lazy" alt="Steam logo" class="absolute inset-0 w-full h-full object-cover"/></a>
+    <!--R A W G-->
+    <a class="relative w-20 h-23 rounded-xl overflow-hidden border-4 border-white shadow-lg hover:scale-105 transition-transform duration-300" href="https://rawg.io/">
+        <img src="https://cdn-images-1.medium.com/max/1200/1*BpN9QAQTn892BeJvKq7FMQ.png" loading="lazy" alt="RAWG logo" class="absolute inset-0 w-full h-full object-cover"/></a><br><br>
+    <!--API-->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div *ngIf="loading()" class="col-span-full text-center text-white">Cargando juegos...</div>
+        <div *ngFor="let g of games(); trackBy: trackByGame" class="items-center game-card bg-black/40 rounded-lg p-2 text-center text-white hover:bg-white/10 transition w-full">
+            <img *ngIf="g.background_image" [src]="g.background_image" [alt]="g.name" loading="lazy" class="w-full h-full object-cover rounded-md mb-2"/>
             <div class="text-xl font-medium truncate">{{g.name}}</div>
-            </div>
+        </div>
     </div>
   </div>
 </section>

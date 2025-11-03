@@ -1,58 +1,45 @@
-import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
-import { CounterPageComponent } from './page/counter/page-component';
-import { HeroPageComponent } from './page/hero/hero-page-component';
-import { VistaPageComponent } from './Vista/vista-page-component';
-import { EnemigosPageComponent } from './Vista/enemigos/enemigos-page-component';
-import { PokemonPageComponent } from './page/Pokemon/pokemon-page-component';
-import { JefesPageComponent } from './Vista/jefes/jefes-page-component';
-import { MapaPageComponent } from './Vista/mapa/mapa-page-component';
-import { AmuletosPageComponent } from './Vista/amuletos/amuletos-page-component';
-import { HabilidadesPageComponent } from './Vista/habilidades/habilidades-page-component';
-import { PersonajesPageComponent } from './Vista/personajes/personajes-page-component';
-
 
 export const routes: Routes = [
   { 
-    path: 'Counter', // or specify a valid path string
-    component: CounterPageComponent,
+    path: 'Counter',
+    loadComponent: () => import('./page/counter/page-component').then(m => m.CounterPageComponent),
   }, 
   {
-    path: 'hero', // or specify a valid path string
-    component: HeroPageComponent,
+    path: 'hero',
+    loadComponent: () => import('./page/hero/hero-page-component').then(m => m.HeroPageComponent),
   },
   {
-    path: 'Vista', // or specify a valid path string
-    component: VistaPageComponent,
+    path: 'Vista',
+    loadComponent: () => import('./Vista/vista-page-component').then(m => m.VistaPageComponent),
   },
   {
-    path: 'enemigos', // or specify a valid path string
-    component: EnemigosPageComponent,
+    path: 'enemigos',
+    loadComponent: () => import('./Vista/enemigos/enemigos-page-component').then(m => m.EnemigosPageComponent),
   },
   {
-    path: 'jefes', // or specify a valid path string
-    component: JefesPageComponent,
+    path: 'jefes',
+    loadComponent: () => import('./Vista/jefes/jefes-page-component').then(m => m.JefesPageComponent),
   },
   {
-    path: 'mapa', // or specify a valid path string
-    component: MapaPageComponent,
+    path: 'mapa',
+    loadComponent: () => import('./Vista/mapa/mapa-page-component').then(m => m.MapaPageComponent),
   },
   {
-    path: 'amuletos', // or specify a valid path string
-    component: AmuletosPageComponent,
+    path: 'amuletos',
+    loadComponent: () => import('./Vista/amuletos/amuletos-page-component').then(m => m.AmuletosPageComponent),
   },
   {
-    path: 'habilidades', // or specify a valid path string
-    component: HabilidadesPageComponent,
+    path: 'habilidades',
+    loadComponent: () => import('./Vista/habilidades/habilidades-page-component').then(m => m.HabilidadesPageComponent),
   },
   {
-    path: 'personajes', // or specify a valid path string
-    component: PersonajesPageComponent,
+    path: 'personajes',
+    loadComponent: () => import('./Vista/personajes/personajes-page-component').then(m => m.PersonajesPageComponent),
   },
   {
-    path: 'Pokemon', // or specify a valid path string
-    component: PokemonPageComponent,
+    path: 'Pokemon',
+    loadComponent: () => import('./page/Pokemon/pokemon-page-component').then(m => m.PokemonPageComponent),
   },
   {path: '**', redirectTo: 'Vista',}
-  ,
 ];
